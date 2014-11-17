@@ -1,0 +1,34 @@
+{
+  "name": "array-duplicated",
+  "description": "Return an array of duplicated values in a given array",
+  "keywords": [
+    "ununique",
+    "duplicated",
+    "array",
+    "filter"
+  ],
+  "main": "./array-duplicated.js",
+  "homepage": "https://github.com/shinnn/array-duplicated",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shinnn/array-duplicated.git"
+  },
+  "authors": [
+    {
+      "name": "Shinnosuke Watanabe",
+      "url": "https://github.com/shinnn"
+    }
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "components",
+    "coverage",
+    "node_modules",
+    "test.js",
+    "array-duplicated-cjs.js",
+    "package.json",
+    "component.json"
+  ]
+}
