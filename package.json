@@ -1,6 +1,6 @@
 {
   "name": "array-duplicated",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Return an array of duplicated values in a given array",
   "repository": "shinnn/array-duplicated",
   "scripts": {
