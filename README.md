@@ -10,7 +10,6 @@ Return an array of duplicated values in a given array
 
 ```javascript
 arrayDuplicated(['a', 2, 'b', true, 'b', 12, 'b', true, ['a']]) //=> ['b', true];
-};
 ```
 
 ## Installation
@@ -47,6 +46,8 @@ var arrayDuplicated = require('shinnn/array-duplicated');
 Return: `Array`
 
 It finds duplicated values in the array, and returns an array of them.
+
+If the array doesn't contain duplicated values, it returns an empty array.
 
 ```javascript
 arrayDuplicated([0,1,1,1,1,1,1,1,1,1]); //=> [1]
