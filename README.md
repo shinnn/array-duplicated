@@ -1,9 +1,9 @@
 # array-duplicated
 
-[![NPM version](https://badge.fury.io/js/array-duplicated.svg)](https://www.npmjs.org/package/array-duplicated)
-[![Bower version](https://badge.fury.io/bo/array-duplicated.svg)](https://github.com/shinnn/array-duplicated/releases)
+[![NPM version](https://img.shields.io/npm/v/array-duplicated.svg?style=flat)](https://www.npmjs.com/package/array-duplicated)
+[![Bower version](https://img.shields.io/bower/v/array-duplicated.svg?style=flat)](https://github.com/shinnn/array-duplicated/releases)
 [![Build Status](https://travis-ci.org/shinnn/array-duplicated.svg?branch=master)](https://travis-ci.org/shinnn/array-duplicated)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/array-duplicated.svg)](https://coveralls.io/r/shinnn/array-duplicated)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/array-duplicated.svg?style=flat)](https://coveralls.io/r/shinnn/array-duplicated)
 [![devDependency Status](https://david-dm.org/shinnn/array-duplicated/dev-status.svg)](https://david-dm.org/shinnn/array-duplicated#info=devDependencies)
 
 Return an array of duplicated values in a given array
@@ -16,7 +16,7 @@ arrayDuplicated(['a', 2, 'b', true, 'b', 12, 'b', true, ['a']]) //=> ['b', true]
 
 ### Package managers
 
-#### [npm](https://www.npmjs.org/)
+#### [npm](https://www.npmjs.com/)
 
 ```sh
 npm install array-duplicated
