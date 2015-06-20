@@ -1,10 +1,10 @@
 'use strict';
 
-var requireBowerFiles = require('require-bower-files');
-var test = require('tape');
+const requireBowerFiles = require('require-bower-files');
+const test = require('tape');
 
 function runTest(description, arrayDuplicated) {
-  test(description, function(t) {
+  test(description, t => {
     t.plan(4);
 
     t.equal(arrayDuplicated.name, 'arrayDuplicated', 'should have a function name.');
@@ -15,20 +15,20 @@ function runTest(description, arrayDuplicated) {
     );
 
     t.throws(
-      arrayDuplicated.bind(null),
+      () => arrayDuplicated(),
       /TypeError.* is not an array\..*must be an array\./,
       'should throw a type error when it takes no arguments.'
     );
 
     t.throws(
-      arrayDuplicated.bind(null, arguments),
+      () => arrayDuplicated(arguments),
       /TypeError.* is not an array\..*must be an array\./,
       'should throw a type error when the first argument is not an array.'
     );
   });
 }
 
-runTest('require(\'array-duplicated\')', require('./'));
+runTest('require(\'array-duplicated\')', require('.'));
 
 global.window = {};
 requireBowerFiles({self: true});
