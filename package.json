@@ -1,6 +1,6 @@
 {
   "name": "array-duplicated",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Return an array of duplicated values in a given array",
   "repository": "shinnn/array-duplicated",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
@@ -26,10 +26,10 @@
   "devDependencies": {
     "@shinnn/eslintrc": "^1.0.0",
     "eslint": "^0.23.0",
-    "istanbul": "^0.3.15",
+    "istanbul": "^0.3.16",
     "istanbul-coveralls": "^1.0.3",
     "require-bower-files": "^2.0.0",
-    "tap-spec": "^4.0.0",
+    "tap-spec": "^4.0.2",
     "tape": "^4.0.0"
   }
 }
