@@ -7,28 +7,22 @@
     "array",
     "filter"
   ],
-  "main": "./array-duplicated.js",
+  "main": "array-duplicated.js",
+  "moduleType": "globals",
   "homepage": "https://github.com/shinnn/array-duplicated",
   "repository": {
     "type": "git",
     "url": "git://github.com/shinnn/array-duplicated.git"
   },
   "authors": [
-    {
-      "name": "Shinnosuke Watanabe",
-      "url": "https://github.com/shinnn"
-    }
+    "Shinnosuke Watanabe (https://github.com/shinnn)"
   ],
   "license": "MIT",
   "ignore": [
     "**/.*",
-    "bower_components",
-    "components",
+    "**/*.js",
+    "**/*.json",
     "coverage",
-    "node_modules",
-    "test.js",
-    "array-duplicated-cjs.js",
-    "package.json",
-    "component.json"
+    "node_modules"
   ]
 }
