@@ -5,10 +5,9 @@
   "repository": "shinnn/array-duplicated",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
-    "pretest": "eslint --config node_modules/@shinnn/eslintrc/rc.json --ignore-path .gitignore .",
-    "test": "node --harmony_arrow_functions test.js | tap-spec",
-    "coverage": "node --harmony_arrow_functions node_modules/.bin/istanbul cover test.js",
-    "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
+    "pretest": "eslint --config @shinnn --ignore-path .gitignore .",
+    "test": "node --strong_mode --throw-deprecation --track-heap-objects test.js | tap-spec",
+    "coverage": "node --throw-deprecation --track-heap-objects node_modules/.bin/istanbul cover test.js"
   },
   "license": "MIT",
   "main": "array-duplicated-cjs.js",
@@ -24,12 +23,12 @@
     "client-side"
   ],
   "devDependencies": {
-    "@shinnn/eslintrc": "^1.0.0",
-    "eslint": "^0.23.0",
-    "istanbul": "^0.3.16",
+    "@shinnn/eslint-config": "^1.4.0",
+    "eslint": "^1.10.3",
+    "istanbul": "^0.4.1",
     "istanbul-coveralls": "^1.0.3",
-    "require-bower-files": "^2.0.0",
-    "tap-spec": "^4.0.2",
-    "tape": "^4.0.0"
+    "require-bower-files": "^3.0.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.2.2"
   }
 }

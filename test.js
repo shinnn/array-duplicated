@@ -1,4 +1,4 @@
-'use strict';
+'use strong';
 
 const requireBowerFiles = require('require-bower-files');
 const test = require('tape');
@@ -21,7 +21,7 @@ function runTest(description, arrayDuplicated) {
     );
 
     t.throws(
-      () => arrayDuplicated(arguments),
+      () => arrayDuplicated(new Buffer('123')),
       /TypeError.* is not an array\..*must be an array\./,
       'should throw a type error when the first argument is not an array.'
     );
@@ -33,4 +33,4 @@ runTest('require(\'array-duplicated\')', require('.'));
 global.window = {};
 requireBowerFiles({self: true});
 
-runTest('window.arrayDuplicated', window.arrayDuplicated);
+runTest('window.arrayDuplicated', global.window.arrayDuplicated);
