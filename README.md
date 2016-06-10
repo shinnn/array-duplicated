@@ -56,6 +56,6 @@ arrayDuplicated([0,1,2,3,4,5,6,7,8,9]); //=> []
 
 ## License
 
-Copyright (c) 2014 - 2015 [Shinnosuke Watanabe](https://github.com/shinnn)
+Copyright (c) 2014 - 2016 [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Licensed under [the MIT License](./LICENSE).
