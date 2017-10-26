@@ -1,5 +1,5 @@
 /*!
- * array-duplicated | MIT (c) Shinnosuke Watanabe
+ * array-duplicated | ISC (c) Shinnosuke Watanabe
  * https://github.com/shinnn/array-duplicated
 */
 module.exports = function arrayDuplicated(arr) {

@@ -1,10 +1,8 @@
 # array-duplicated
 
-[![NPM version](https://img.shields.io/npm/v/array-duplicated.svg)](https://www.npmjs.com/package/array-duplicated)
-[![Bower version](https://img.shields.io/bower/v/array-duplicated.svg)](https://github.com/shinnn/array-duplicated/releases)
+[![npm version](https://img.shields.io/npm/v/array-duplicated.svg)](https://www.npmjs.com/package/array-duplicated)
 [![Build Status](https://travis-ci.org/shinnn/array-duplicated.svg?branch=master)](https://travis-ci.org/shinnn/array-duplicated)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/array-duplicated.svg)](https://coveralls.io/r/shinnn/array-duplicated)
-[![devDependency Status](https://david-dm.org/shinnn/array-duplicated/dev-status.svg)](https://david-dm.org/shinnn/array-duplicated#info=devDependencies)
 
 Return an array of duplicated values in a given array
 
@@ -14,31 +12,17 @@ arrayDuplicated(['a', 2, 'b', true, 'b', 12, 'b', true, ['a']]) //=> ['b', true]
 
 ## Installation
 
-### Package managers
+[Use](https://docs.npmjs.com/cli/install) [npm](https://docs.npmjs.com/getting-started/what-is-npm).
 
-#### [npm](https://www.npmjs.com/)
-
-```sh
+```
 npm install array-duplicated
 ```
 
-#### [bower](http://bower.io/)
-
-```sh
-bower install array-duplicated
-```
-
-#### [Duo](http://duojs.org/)
+## API
 
 ```javascript
-var arrayDuplicated = require('shinnn/array-duplicated');
+import arrayDuplicated from 'array-duplicated';
 ```
-
-### Standalone
-
-[Download the script file directly.](https://raw.githubusercontent.com/shinnn/array-duplicated/master/array-duplicated.js)
-
-## API
 
 ### arrayDuplicated(*array*)
 
@@ -56,6 +40,4 @@ arrayDuplicated([0,1,2,3,4,5,6,7,8,9]); //=> []
 
 ## License
 
-Copyright (c) 2014 - 2016 [Shinnosuke Watanabe](https://github.com/shinnn)
-
-Licensed under [the MIT License](./LICENSE).
+[ISC License](./LICENSE) © 2017 Shinnosuke Watanabe
