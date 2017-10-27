@@ -1,4 +1,4 @@
-'use strong';
+'use strict';
 
 const requireBowerFiles = require('require-bower-files');
 const test = require('tape');
@@ -21,7 +21,7 @@ function runTest(description, arrayDuplicated) {
     );
 
     t.throws(
-      () => arrayDuplicated(new Buffer('123')),
+      () => arrayDuplicated(Buffer.from('123')),
       /TypeError.* is not an array\..*must be an array\./,
       'should throw a type error when the first argument is not an array.'
     );

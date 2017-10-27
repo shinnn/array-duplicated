@@ -6,10 +6,7 @@ module.exports = function arrayDuplicated(arr) {
   'use strict';
 
   if (!Array.isArray(arr)) {
-    throw new TypeError(
-      arr +
-      ' is not an array. Argument to array-duplicated  must be an array.'
-    );
+    throw new TypeError(arr + ' is not an array. Argument to array-duplicated  must be an array.');
   }
 
   var result = [];
