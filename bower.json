@@ -7,8 +7,8 @@
     "array",
     "filter"
   ],
-  "main": "array-duplicated.js",
-  "moduleType": "globals",
+  "main": "index.mjs",
+  "moduleType": "es6",
   "homepage": "https://github.com/shinnn/array-duplicated",
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
   "authors": [
     "Shinnosuke Watanabe (https://github.com/shinnn)"
   ],
-  "license": "MIT",
+  "license": "ISC",
   "ignore": [
     "**/.*",
     "**/*.js",

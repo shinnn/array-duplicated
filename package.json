@@ -1,38 +1,39 @@
 {
-  "name": "array-duplicated",
-  "version": "1.0.2",
-  "description": "Return an array of duplicated values in a given array",
-  "repository": "shinnn/array-duplicated",
-  "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
-  "scripts": {
-    "pretest": "eslint --fix --format=codeframe --ignore-path .gitignore .",
-    "test": "node test.js",
-    "coverage": "istanbul cover test.js"
-  },
-  "license": "ISC",
-  "main": "array-duplicated-cjs.js",
-  "files": [
-    "array-duplicated-cjs.js"
-  ],
-  "keywords": [
-    "ununique",
-    "duplicated",
-    "array",
-    "filter",
-    "browser",
-    "client-side"
-  ],
-  "devDependencies": {
-    "@shinnn/eslint-config": "^4.2.0",
-    "eslint": "^4.10.0",
-    "istanbul": "^0.4.5",
-    "require-bower-files": "^3.0.0",
-    "tape": "^4.8.0"
-  },
-  "eslintConfig": {
-    "extends": "@shinnn",
-    "rules": {
-      "no-var": "off"
-    }
-  }
+	"name": "array-duplicated",
+	"version": "1.0.2",
+	"description": "Return an Array of duplicated values in a given Array",
+	"repository": "shinnn/array-duplicated",
+	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
+	"license": "ISC",
+	"scripts": {
+		"prebuild": "eslint .",
+		"build": "rollup --config=node:module",
+		"pretest": "npm run-script build",
+		"test": "nyc --reporter=html --reporter=text node test.js"
+	},
+	"files": [
+		"index.js",
+		"index.mjs"
+	],
+	"module": "index.mjs",
+	"keywords": [
+		"ununique",
+		"duplicated",
+		"array",
+		"filter",
+		"browser",
+		"client-side"
+	],
+	"devDependencies": {
+		"@shinnn/eslint-config-node": "^6.0.0",
+		"eslint": "^5.1.0",
+		"nyc": "^12.0.2",
+		"require-bower-files": "^3.0.0",
+		"rollup": "^0.62.0",
+		"rollup-config-module": "^2.0.0",
+		"tape": "^4.9.1"
+	},
+	"eslintConfig": {
+		"extends": "@shinnn"
+	}
 }

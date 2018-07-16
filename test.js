@@ -1,36 +1,25 @@
 'use strict';
 
-const requireBowerFiles = require('require-bower-files');
+const arrayDuplicated = require('.');
 const test = require('tape');
 
-function runTest(description, arrayDuplicated) {
-  test(description, t => {
-    t.plan(4);
+test('arrayDuplicated()', t => {
+	t.deepEqual(
+		arrayDuplicated(['1', '2', 'a', '3', '2', 'a', 'a']), ['2', 'a'],
+		'should return an Array of duplicated values.'
+	);
 
-    t.equal(arrayDuplicated.name, 'arrayDuplicated', 'should have a function name.');
+	t.throws(
+		() => arrayDuplicated(),
+		/TypeError.* is not an array\..*must be an array\./,
+		'should throw a type error when it takes no arguments.'
+	);
 
-    t.deepEqual(
-      arrayDuplicated(['1', '2', 'a', '3', '2', 'a', 'a']), ['2', 'a'],
-      'should return an array of duplicated values.'
-    );
+	t.throws(
+		() => arrayDuplicated(Buffer.from('123')),
+		/TypeError.* is not an array\..*must be an array\./,
+		'should throw a type error when the first argument is not an array.'
+	);
 
-    t.throws(
-      () => arrayDuplicated(),
-      /TypeError.* is not an array\..*must be an array\./,
-      'should throw a type error when it takes no arguments.'
-    );
-
-    t.throws(
-      () => arrayDuplicated(Buffer.from('123')),
-      /TypeError.* is not an array\..*must be an array\./,
-      'should throw a type error when the first argument is not an array.'
-    );
-  });
-}
-
-runTest('require(\'array-duplicated\')', require('.'));
-
-global.window = {};
-requireBowerFiles({self: true});
-
-runTest('window.arrayDuplicated', global.window.arrayDuplicated);
+	t.end();
+});
