@@ -11,13 +11,13 @@ test('arrayDuplicated()', t => {
 
 	t.throws(
 		() => arrayDuplicated(),
-		/TypeError.* is not an array\..*must be an array\./,
+		/^TypeError.*Expected an Array, but got undefined\./u,
 		'should throw a type error when it takes no arguments.'
 	);
 
 	t.throws(
-		() => arrayDuplicated(Buffer.from('123')),
-		/TypeError.* is not an array\..*must be an array\./,
+		() => arrayDuplicated(Symbol('123')),
+		/^TypeError.*Expected an Array, but got Symbol\(123\) \(symbol\)\./u,
 		'should throw a type error when the first argument is not an array.'
 	);
 

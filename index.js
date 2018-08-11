@@ -1,12 +1,15 @@
 'use strict';
 
+var appendType = require('append-type');
+
 /*!
  * array-duplicated | ISC (c) Shinnosuke Watanabe
  * https://github.com/shinnn/array-duplicated
 */
+
 function arrayDuplicated(arr) {
 	if (!Array.isArray(arr)) {
-		throw new TypeError(arr + ' is not an array. Argument to array-duplicated  must be an array.');
+		throw new TypeError('Expected an Array, but got ' + appendType(arr) + '.');
 	}
 
 	var result = [];
