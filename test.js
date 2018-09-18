@@ -9,6 +9,16 @@ test('arrayDuplicated()', t => {
 		'should return an Array of duplicated values.'
 	);
 
+	t.deepEqual(
+		arrayDuplicated([-0, -0, 0, 0]), [-0, 0],
+		'should consider same-value equality.'
+	);
+
+	t.deepEqual(
+		arrayDuplicated([{}]), [],
+		'should return an empty value when the array has no duplicates.'
+	);
+
 	t.throws(
 		() => arrayDuplicated(),
 		/^TypeError.*Expected an Array, but got undefined\./u,
