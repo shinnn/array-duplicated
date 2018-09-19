@@ -11,7 +11,7 @@ function is(val) {
 	return Object.is(this, val);
 }
 
-function arrayDuplicated(arr) {
+module.exports = function arrayDuplicated(arr) {
 	if (!Array.isArray(arr)) {
 		throw new TypeError('Expected an Array, but got ' + appendType(arr) + '.');
 	}
@@ -47,5 +47,3 @@ function arrayDuplicated(arr) {
 
 	return results;
 }
-
-module.exports = arrayDuplicated;
