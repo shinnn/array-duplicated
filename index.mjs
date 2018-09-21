@@ -8,6 +8,25 @@ function is(val) {
 	return Object.is(this, val);
 }
 
+function reducer(accumulator, val, index, arr) {
+	if (accumulator.skippableIndexes.has(index)) {
+		return accumulator;
+	}
+
+	if (accumulator.results.findIndex(is, val) !== -1) {
+		return accumulator;
+	}
+
+	var foundIndex = arr.findIndex(is, val);
+
+	if (foundIndex !== index) {
+		accumulator.skippableIndexes.add(foundIndex);
+		accumulator.results.unshift(val);
+	}
+
+	return accumulator;
+}
+
 export default function arrayDuplicated(arr) {
 	if (!Array.isArray(arr)) {
 		throw new TypeError('Expected an Array, but got ' + appendType(arr) + '.');
@@ -17,30 +36,8 @@ export default function arrayDuplicated(arr) {
 		return [];
 	}
 
-	var results = [];
-	var skippableIndexes = new Set();
-	var index = arr.length;
-
-	while (index--) {
-		if (skippableIndexes.has(index)) {
-			continue;
-		}
-
-		var val = arr[index];
-
-		if (results.findIndex(is, val) !== -1) {
-			continue;
-		}
-
-		var foundIndex = arr.findIndex(is, val);
-
-		if (foundIndex === index) {
-			continue;
-		}
-
-		skippableIndexes.add(foundIndex);
-		results.unshift(val);
-	}
-
-	return results;
+	return arr.reduceRight(reducer, {
+		results: [],
+		skippableIndexes: new Set()
+	}).results;
 }

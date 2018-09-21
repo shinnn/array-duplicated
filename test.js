@@ -5,18 +5,27 @@ const test = require('tape');
 
 test('arrayDuplicated()', t => {
 	t.deepEqual(
-		arrayDuplicated(['1', '2', 'a', '3', '2', 'a', 'a']), ['2', 'a'],
+		arrayDuplicated(['1', '2', 'a', '3', '2', 'a', 'a']),
+		['2', 'a'],
 		'should return an Array of duplicated values.'
 	);
 
 	t.deepEqual(
-		arrayDuplicated([-0, -0, 0, 0]), [-0, 0],
+		arrayDuplicated([-0, -0, 0, 0]),
+		[-0, 0],
 		'should consider same-value equality.'
 	);
 
 	t.deepEqual(
-		arrayDuplicated([{}]), [],
+		arrayDuplicated([{}]),
+		[],
 		'should return an empty value when the array has no duplicates.'
+	);
+
+	t.deepEqual(
+		arrayDuplicated([, , ]), // eslint-disable-line array-bracket-spacing, no-sparse-arrays
+		[],
+		'should ignore empty indexes.'
 	);
 
 	t.throws(
