@@ -1,6 +1,6 @@
 {
 	"name": "array-duplicated",
-	"version": "2.0.0-3",
+	"version": "2.0.0",
 	"description": "Return an Array of duplicated values in a given Array",
 	"repository": "shinnn/array-duplicated",
 	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
@@ -32,7 +32,7 @@
 		"eslint": "^5.6.0",
 		"nyc": "^13.0.1",
 		"nyc-config-common": "^1.0.0",
-		"rollup": "^0.66.1",
+		"rollup": "^0.66.2",
 		"rollup-config-module": "^2.0.1",
 		"tape": "^4.9.1"
 	},
