@@ -1,7 +1,7 @@
 # array-duplicated
 
 [![npm version](https://img.shields.io/npm/v/array-duplicated.svg)](https://www.npmjs.com/package/array-duplicated)
-[![Build Status](https://travis-ci.org/shinnn/array-duplicated.svg?branch=master)](https://travis-ci.org/shinnn/array-duplicated)
+[![Build Status](https://travis-ci.com/shinnn/array-duplicated.svg?branch=master)](https://travis-ci.com/shinnn/array-duplicated)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/array-duplicated.svg)](https://coveralls.io/github/shinnn/array-duplicated)
 
 Return duplicated values in a given `Array`
@@ -38,7 +38,7 @@ arrayDuplicated([0, 1, 1, 1, 1, 1, 1, 1, 1, 1]); //=> [1]
 "Duplicated" means a value is identical to another value in the ECMAScript [same-value equality](https://developer.mozilla.org/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value_equality) level.
 
 ```javascript
-arrayDuplicated([-1, 1]); //=> []
+arrayDuplicated([-0, 0]); //=> []
 ```
 
 ## License
